@@ -1,0 +1,13 @@
+#! /bin/bash 
+#vim: ft=bash
+
+word1=$(shuf -n1 /usr/share/dict/american-english)
+word1=${word1//"'s"/}
+word1=${word1,,}
+
+word2=$(shuf -n1 /usr/share/dict/american-english)
+word2=${word2//"'s"/}
+word2=${word2,,}
+
+echo "$word1-$word2"
+$(git checkout -b $word1-$word2)
